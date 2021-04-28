@@ -201,7 +201,6 @@ func newRuntime(
 func TestRequestAndBatch(t *testing.T) {
 	t.Parallel()
 	tb, state, samples, rt, ctx := newRuntime(t)
-	defer tb.Cleanup()
 	sr := tb.Replacer.Replace
 
 	// Handle paths with custom logic
@@ -1401,7 +1400,6 @@ func TestRequestAndBatch(t *testing.T) {
 func TestRequestArrayBufferBody(t *testing.T) {
 	t.Parallel()
 	tb, _, _, rt, _ := newRuntime(t) //nolint: dogsled
-	defer tb.Cleanup()
 	sr := tb.Replacer.Replace
 
 	tb.Mux.HandleFunc("/post-arraybuffer", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -1440,7 +1438,6 @@ func TestRequestArrayBufferBody(t *testing.T) {
 func TestRequestCompression(t *testing.T) {
 	t.Parallel()
 	tb, state, _, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	logHook := testutils.SimpleLogrusHook{HookedLevels: []logrus.Level{logrus.WarnLevel}}
 	state.Logger.AddHook(&logHook)
@@ -1628,7 +1625,6 @@ func TestRequestCompression(t *testing.T) {
 func TestResponseTypes(t *testing.T) {
 	t.Parallel()
 	tb, state, _, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	// We don't expect any failed requests
 	state.Options.Throw = null.BoolFrom(true)
@@ -1758,7 +1754,6 @@ func TestErrorCodes(t *testing.T) {
 	t.Parallel()
 	tb, state, samples, rt, _ := newRuntime(t)
 	state.Options.Throw = null.BoolFrom(false)
-	defer tb.Cleanup()
 	sr := tb.Replacer.Replace
 
 	// Handple paths with custom logic
@@ -1868,7 +1863,6 @@ func TestErrorCodes(t *testing.T) {
 func TestResponseWaitingAndReceivingTimings(t *testing.T) {
 	t.Parallel()
 	tb, state, _, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	// We don't expect any failed requests
 	state.Options.Throw = null.BoolFrom(true)
@@ -1911,7 +1905,6 @@ func TestResponseWaitingAndReceivingTimings(t *testing.T) {
 func TestResponseTimingsWhenTimeout(t *testing.T) {
 	t.Parallel()
 	tb, state, _, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	// We expect a failed request
 	state.Options.Throw = null.BoolFrom(false)
@@ -1933,7 +1926,6 @@ func TestResponseTimingsWhenTimeout(t *testing.T) {
 func TestNoResponseBodyMangling(t *testing.T) {
 	t.Parallel()
 	tb, state, _, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	// We don't expect any failed requests
 	state.Options.Throw = null.BoolFrom(true)
@@ -1961,7 +1953,6 @@ func TestNoResponseBodyMangling(t *testing.T) {
 
 func TestRedirectMetricTags(t *testing.T) {
 	tb, _, samples, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	tb.Mux.HandleFunc("/redirect/post", http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		http.Redirect(w, r, "/get", http.StatusMovedPermanently)
@@ -2008,7 +1999,6 @@ func TestRedirectMetricTags(t *testing.T) {
 
 func BenchmarkHandlingOfResponseBodies(b *testing.B) {
 	tb, state, samples, rt, _ := newRuntime(b)
-	defer tb.Cleanup()
 
 	state.BPool = bpool.NewBufferPool(100)
 
@@ -2078,7 +2068,6 @@ func BenchmarkHandlingOfResponseBodies(b *testing.B) {
 func TestErrorsWithDecompression(t *testing.T) {
 	t.Parallel()
 	tb, state, _, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	state.Options.Throw = null.BoolFrom(false)
 
@@ -2106,8 +2095,7 @@ func TestRequestAndBatchTLS(t *testing.T) {
 		t.Skip()
 	}
 	t.Parallel()
-	tb, _, samples, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
+	_, _, samples, rt, _ := newRuntime(t) //nolint:dogsled
 
 	t.Run("cert_expired", func(t *testing.T) {
 		_, err := rt.RunString(`http.get("https://expired.badssl.com/");`)
@@ -2163,7 +2151,6 @@ func TestRequestAndBatchTLS(t *testing.T) {
 func TestDigestAuthWithBody(t *testing.T) {
 	t.Parallel()
 	tb, state, samples, rt, _ := newRuntime(t)
-	defer tb.Cleanup()
 
 	state.Options.Throw = null.BoolFrom(true)
 	state.Options.HTTPDebug = null.StringFrom("full")
