@@ -27,9 +27,9 @@ import (
 
 	"github.com/manyminds/api2go/jsonapi"
 
-	"github.com/loadimpact/k6/api/common"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/executor"
+	"go.staging.k6.io/k6/api/common"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/executor"
 )
 
 func handleGetStatus(rw http.ResponseWriter, r *http.Request) {

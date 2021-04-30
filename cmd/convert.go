@@ -29,8 +29,8 @@ import (
 	"github.com/spf13/cobra"
 	"gopkg.in/guregu/null.v3"
 
-	"github.com/loadimpact/k6/converter/har"
-	"github.com/loadimpact/k6/lib"
+	"go.staging.k6.io/k6/converter/har"
+	"go.staging.k6.io/k6/lib"
 )
 
 // TODO: fix this... or remove k6 convert

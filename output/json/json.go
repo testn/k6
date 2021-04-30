@@ -27,12 +27,12 @@ import (
 	"strings"
 	"time"
 
-	"github.com/loadimpact/k6/output"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/output"
+	"go.staging.k6.io/k6/stats"
 	"github.com/sirupsen/logrus"
 )
 
-// TODO: add option for emitting proper JSON files (https://github.com/loadimpact/k6/issues/737)
+// TODO: add option for emitting proper JSON files (https://go.staging.k6.io/k6/issues/737)
 const flushPeriod = 200 * time.Millisecond // TODO: make this configurable
 
 // Output funnels all passed metrics to an (optionally gzipped) JSON file.

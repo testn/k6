@@ -27,10 +27,10 @@ import (
 	"time"
 
 	"github.com/dop251/goja"
-	"github.com/loadimpact/k6/js/common"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/stats"
-	"github.com/loadimpact/k6/ui"
+	"go.staging.k6.io/k6/js/common"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/stats"
+	"go.staging.k6.io/k6/ui"
 )
 
 // TODO: move this to a separate JS file and use go.rice to embed it

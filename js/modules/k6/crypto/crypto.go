@@ -38,7 +38,7 @@ import (
 
 	"github.com/dop251/goja"
 
-	"github.com/loadimpact/k6/js/common"
+	"go.staging.k6.io/k6/js/common"
 )
 
 type Crypto struct{}

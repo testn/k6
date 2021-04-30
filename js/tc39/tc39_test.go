@@ -18,9 +18,9 @@ import (
 
 	"github.com/dop251/goja"
 	"github.com/dop251/goja/parser"
-	"github.com/loadimpact/k6/js/compiler"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
+	"go.staging.k6.io/k6/js/compiler"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
 	"github.com/stretchr/testify/assert"
 	"gopkg.in/yaml.v2"
 )

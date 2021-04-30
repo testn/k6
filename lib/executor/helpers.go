@@ -29,9 +29,9 @@ import (
 
 	"github.com/sirupsen/logrus"
 
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/ui/pb"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/ui/pb"
 )
 
 func sumStagesDuration(stages []Stage) (result time.Duration) {
@@ -79,7 +79,7 @@ func validateStages(stages []Stage) []error {
 // closure. It takes care of updating the execution state statistics and
 // warning messages. And returns whether a full iteration was finished or not
 //
-// TODO: emit the end-of-test iteration metrics here (https://github.com/loadimpact/k6/issues/1250)
+// TODO: emit the end-of-test iteration metrics here (https://go.staging.k6.io/k6/issues/1250)
 func getIterationRunner(
 	executionState *lib.ExecutionState, logger *logrus.Entry,
 ) func(context.Context, lib.ActiveVU) bool {

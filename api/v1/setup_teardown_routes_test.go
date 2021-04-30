@@ -36,13 +36,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	"github.com/loadimpact/k6/core"
-	"github.com/loadimpact/k6/core/local"
-	"github.com/loadimpact/k6/js"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/loader"
+	"go.staging.k6.io/k6/core"
+	"go.staging.k6.io/k6/core/local"
+	"go.staging.k6.io/k6/js"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/loader"
 )
 
 func TestSetupData(t *testing.T) {

@@ -32,9 +32,9 @@ import (
 	"github.com/spf13/cobra"
 	"golang.org/x/crypto/ssh/terminal"
 
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/output/influxdb"
-	"github.com/loadimpact/k6/ui"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/output/influxdb"
+	"go.staging.k6.io/k6/ui"
 )
 
 func getLoginInfluxDBCommand(logger logrus.FieldLogger) *cobra.Command {

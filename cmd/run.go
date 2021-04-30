@@ -41,15 +41,15 @@ import (
 	"github.com/spf13/cobra"
 	"github.com/spf13/pflag"
 
-	"github.com/loadimpact/k6/api"
-	"github.com/loadimpact/k6/core"
-	"github.com/loadimpact/k6/core/local"
-	"github.com/loadimpact/k6/js"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/consts"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/loader"
-	"github.com/loadimpact/k6/ui/pb"
+	"go.staging.k6.io/k6/api"
+	"go.staging.k6.io/k6/core"
+	"go.staging.k6.io/k6/core/local"
+	"go.staging.k6.io/k6/js"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/consts"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/loader"
+	"go.staging.k6.io/k6/ui/pb"
 )
 
 const (
@@ -245,7 +245,7 @@ a commandline interface for interacting with it.`,
 				lingerCancel() // stop the test run, metric processing is cancelled below
 
 				// If we get a second signal, we immediately exit, so something like
-				// https://github.com/loadimpact/k6/issues/971 never happens again
+				// https://go.staging.k6.io/k6/issues/971 never happens again
 				sig = <-sigC
 				logger.WithField("sig", sig).Error("Aborting k6 in response to signal")
 				globalCancel() // not that it matters, given the following command...

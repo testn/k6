@@ -35,11 +35,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	"github.com/loadimpact/k6/core"
-	"github.com/loadimpact/k6/core/local"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/lib/testutils/minirunner"
+	"go.staging.k6.io/k6/core"
+	"go.staging.k6.io/k6/core/local"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib/testutils/minirunner"
 )
 
 func TestGetStatus(t *testing.T) {

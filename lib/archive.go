@@ -38,8 +38,8 @@ import (
 
 	"github.com/spf13/afero"
 
-	"github.com/loadimpact/k6/lib/fsext"
-	"github.com/loadimpact/k6/loader"
+	"go.staging.k6.io/k6/lib/fsext"
+	"go.staging.k6.io/k6/loader"
 )
 
 //nolint: gochecknoglobals, lll

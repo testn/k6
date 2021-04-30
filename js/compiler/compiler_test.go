@@ -28,8 +28,8 @@ import (
 	"github.com/dop251/goja/parser"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
 )
 
 func TestTransform(t *testing.T) {

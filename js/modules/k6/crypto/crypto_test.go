@@ -31,8 +31,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/loadimpact/k6/js/common"
-	"github.com/loadimpact/k6/lib"
+	"go.staging.k6.io/k6/js/common"
+	"go.staging.k6.io/k6/lib"
 )
 
 type MockReader struct{}

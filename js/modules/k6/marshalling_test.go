@@ -29,13 +29,13 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/loadimpact/k6/js"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/lib/testutils/httpmultibin"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/loader"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/js"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib/testutils/httpmultibin"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/loader"
+	"go.staging.k6.io/k6/stats"
 )
 
 func TestSetupDataMarshalling(t *testing.T) {

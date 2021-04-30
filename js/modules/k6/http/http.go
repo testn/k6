@@ -23,9 +23,9 @@ package http
 import (
 	"context"
 
-	"github.com/loadimpact/k6/js/common"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/netext"
+	"go.staging.k6.io/k6/js/common"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/netext"
 )
 
 const (

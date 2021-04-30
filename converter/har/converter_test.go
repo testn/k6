@@ -27,10 +27,10 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/loadimpact/k6/js"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/loader"
+	"go.staging.k6.io/k6/js"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/loader"
 )
 
 func TestBuildK6Headers(t *testing.T) {

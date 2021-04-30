@@ -35,10 +35,10 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/output"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/output"
+	"go.staging.k6.io/k6/stats"
 )
 
 func TestMakeHeader(t *testing.T) {

@@ -40,16 +40,16 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/loadimpact/k6/cloudapi"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/metrics"
-	"github.com/loadimpact/k6/lib/netext"
-	"github.com/loadimpact/k6/lib/netext/httpext"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/lib/testutils/httpmultibin"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/output"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/cloudapi"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/metrics"
+	"go.staging.k6.io/k6/lib/netext"
+	"go.staging.k6.io/k6/lib/netext/httpext"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib/testutils/httpmultibin"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/output"
+	"go.staging.k6.io/k6/stats"
 )
 
 func tagEqual(expected, got *stats.SampleTags) bool {
@@ -773,12 +773,12 @@ func TestNewName(t *testing.T) {
 	}{
 		{
 			url: &url.URL{
-				Opaque: "github.com/loadimpact/k6/samples/http_get.js",
+				Opaque: "go.staging.k6.io/k6/samples/http_get.js",
 			},
 			expected: "http_get.js",
 		},
 		{
-			url:      mustParse("http://github.com/loadimpact/k6/samples/http_get.js"),
+			url:      mustParse("http://go.staging.k6.io/k6/samples/http_get.js"),
 			expected: "http_get.js",
 		},
 		{

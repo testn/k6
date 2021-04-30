@@ -31,12 +31,12 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/loadimpact/k6/api/common"
-	"github.com/loadimpact/k6/core"
-	"github.com/loadimpact/k6/core/local"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/lib/testutils/minirunner"
+	"go.staging.k6.io/k6/api/common"
+	"go.staging.k6.io/k6/core"
+	"go.staging.k6.io/k6/core/local"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib/testutils/minirunner"
 )
 
 func testHTTPHandler(rw http.ResponseWriter, r *http.Request) {

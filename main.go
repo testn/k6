@@ -21,7 +21,7 @@
 package main
 
 import (
-	"github.com/loadimpact/k6/cmd"
+	"go.staging.k6.io/k6/cmd"
 )
 
 func main() {

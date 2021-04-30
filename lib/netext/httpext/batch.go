@@ -24,7 +24,7 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/loadimpact/k6/lib"
+	"go.staging.k6.io/k6/lib"
 )
 
 // BatchParsedHTTPRequest extends the normal parsed HTTP request with a pointer

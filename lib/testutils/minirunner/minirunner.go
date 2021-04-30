@@ -24,8 +24,8 @@ import (
 	"context"
 	"io"
 
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/stats"
 )
 
 // Ensure mock implementations conform to the interfaces.

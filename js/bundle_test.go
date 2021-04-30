@@ -39,12 +39,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/consts"
-	"github.com/loadimpact/k6/lib/fsext"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/loader"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/consts"
+	"go.staging.k6.io/k6/lib/fsext"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/loader"
 )
 
 const isWindows = runtime.GOOS == "windows"

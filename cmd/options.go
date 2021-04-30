@@ -29,10 +29,10 @@ import (
 	"github.com/spf13/pflag"
 	"gopkg.in/guregu/null.v3"
 
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/consts"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/consts"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/stats"
 )
 
 var (

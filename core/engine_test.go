@@ -34,19 +34,19 @@ import (
 	"github.com/stretchr/testify/require"
 	"gopkg.in/guregu/null.v3"
 
-	"github.com/loadimpact/k6/core/local"
-	"github.com/loadimpact/k6/js"
-	"github.com/loadimpact/k6/lib"
-	"github.com/loadimpact/k6/lib/executor"
-	"github.com/loadimpact/k6/lib/metrics"
-	"github.com/loadimpact/k6/lib/testutils"
-	"github.com/loadimpact/k6/lib/testutils/httpmultibin"
-	"github.com/loadimpact/k6/lib/testutils/minirunner"
-	"github.com/loadimpact/k6/lib/testutils/mockoutput"
-	"github.com/loadimpact/k6/lib/types"
-	"github.com/loadimpact/k6/loader"
-	"github.com/loadimpact/k6/output"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/core/local"
+	"go.staging.k6.io/k6/js"
+	"go.staging.k6.io/k6/lib"
+	"go.staging.k6.io/k6/lib/executor"
+	"go.staging.k6.io/k6/lib/metrics"
+	"go.staging.k6.io/k6/lib/testutils"
+	"go.staging.k6.io/k6/lib/testutils/httpmultibin"
+	"go.staging.k6.io/k6/lib/testutils/minirunner"
+	"go.staging.k6.io/k6/lib/testutils/mockoutput"
+	"go.staging.k6.io/k6/lib/types"
+	"go.staging.k6.io/k6/loader"
+	"go.staging.k6.io/k6/output"
+	"go.staging.k6.io/k6/stats"
 )
 
 const isWindows = runtime.GOOS == "windows"
@@ -429,7 +429,7 @@ func TestSentReceivedMetrics(t *testing.T) {
 		// NOTE(imiric): This needs to keep testing against /ws-echo-invalid because
 		// this test is highly sensitive to metric data, and slightly differing
 		// WS server implementations might introduce flakiness.
-		// See https://github.com/loadimpact/k6/pull/1149
+		// See https://go.staging.k6.io/k6/pull/1149
 		{tr(`import ws from "k6/ws";
 			let data = "0123456789".repeat(100);
 			export default function() {

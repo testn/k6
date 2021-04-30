@@ -29,8 +29,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/loadimpact/k6/lib/netext/httpext"
-	"github.com/loadimpact/k6/stats"
+	"go.staging.k6.io/k6/lib/netext/httpext"
+	"go.staging.k6.io/k6/stats"
 )
 
 const testGetFormHTML = `
